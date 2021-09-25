@@ -102,6 +102,7 @@ class AutosizeInput extends Component {
 		if (!this.mounted || !this.sizer || typeof this.sizer.scrollWidth === 'undefined') {
 			return;
 		}
+		this.copyInputStyles();
 		let newInputWidth;
 		if (this.props.placeholder && (!this.props.value || (this.props.value && this.props.placeholderIsMinWidth))) {
 			newInputWidth = Math.max(this.sizer.scrollWidth, this.placeHolderSizer.scrollWidth) + 2;

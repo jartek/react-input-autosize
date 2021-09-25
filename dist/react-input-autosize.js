@@ -332,6 +332,7 @@ var AutosizeInput = function (_Component) {
 			if (!this.mounted || !this.sizer || typeof this.sizer.scrollWidth === 'undefined') {
 				return;
 			}
+			this.copyInputStyles();
 			var newInputWidth = void 0;
 			if (this.props.placeholder && (!this.props.value || this.props.value && this.props.placeholderIsMinWidth)) {
 				newInputWidth = Math.max(this.sizer.scrollWidth, this.placeHolderSizer.scrollWidth) + 2;
